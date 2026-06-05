@@ -21,7 +21,23 @@ jobs:
       - name: List project
         run: xcodebuild -list -project ChatWithAnyone.xcodeproj
 
+      - name: Check iOS 26 SDK support
+        id: sdk
+        run: |
+          set -euo pipefail
+
+          SDK_PATH="$(xcrun --sdk iphonesimulator --show-sdk-path)"
+          echo "Simulator SDK: ${SDK_PATH}"
+
+          if [[ "${SDK_PATH}" == *"iPhoneSimulator26"* ]] && [[ -d "${SDK_PATH}/System/Library/Frameworks/FoundationModels.framework" ]]; then
+            echo "available=true" >> "${GITHUB_OUTPUT}"
+          else
+            echo "available=false" >> "${GITHUB_OUTPUT}"
+            echo "::notice title=Build skipped::ChatWithAnyone requires the iOS 26 simulator SDK and FoundationModels.framework. The hosted runner does not currently provide that SDK."
+          fi
+
       - name: Build
+        if: steps.sdk.outputs.available == 'true'
         run: |
           set -o pipefail
           xcodebuild \

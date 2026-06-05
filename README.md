@@ -49,6 +49,10 @@ xcodebuild -project ChatWithAnyone.xcodeproj -scheme ChatWithAnyone -destination
 
 Simulator names vary by installed Xcode version. If the command fails, run `xcrun simctl list devices available` and use an available iOS simulator name.
 
+## Continuous Integration
+
+GitHub Actions validates that the Xcode project can be listed on hosted macOS runners. The full app build runs only when the runner includes the iOS 26 simulator SDK and `FoundationModels.framework`; otherwise CI records a notice because older hosted Xcode images cannot compile this app honestly.
+
 ## Contributing
 
 Good first contributions include:
@@ -78,7 +82,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 - Add privacy threat modeling for saved conversations.
 - Improve accessibility and localization coverage.
 - Add screenshots and a short demo video.
-- Publish a tagged release once the StoreKit test plan and first privacy review are complete.
+- Publish a GitHub Release once the StoreKit test plan and first privacy review are complete.
 
 ## License
 
