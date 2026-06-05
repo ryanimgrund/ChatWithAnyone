@@ -62,6 +62,14 @@ Good first contributions include:
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 
+## Maintainer Docs
+
+- [Privacy notes](PRIVACY.md)
+- [Security policy](SECURITY.md)
+- [Release checklist](RELEASE.md)
+- [Maintainer playbook](docs/maintainer-playbook.md)
+- [OpenAI Codex OSS readiness notes](docs/openai-codex-oss-readiness.md)
+
 ## Roadmap
 
 - Add a StoreKit test plan and documented product identifiers.
@@ -70,6 +78,7 @@ Read [CONTRIBUTING.md](CONTRIBUTING.md) before opening a pull request.
 - Add privacy threat modeling for saved conversations.
 - Improve accessibility and localization coverage.
 - Add screenshots and a short demo video.
+- Publish a tagged release once the StoreKit test plan and first privacy review are complete.
 
 ## License
 

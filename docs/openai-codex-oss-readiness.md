@@ -19,6 +19,7 @@ OpenAI reviews signals such as:
 - Local-first privacy goal that may matter to users.
 - SwiftUI, StoreKit, AVFoundation, and Foundation Models integration.
 - Maintainer docs, issue templates, security policy, privacy notes, and CI added locally.
+- Project now has a release checklist, maintainer playbook, changelog, support policy, and application draft.
 
 ## Current Gaps
 
@@ -42,7 +43,7 @@ OpenAI reviews signals such as:
 
 ## Draft Qualification Answer
 
-ChatWithAnyone is an early-stage local-first iOS project for private conversational practice using Apple's on-device Foundation Models. It matters because it explores privacy-preserving AI companionship without a backend or remote chat logging. I maintain the code, docs, releases, issue triage, and privacy/security review.
+ChatWithAnyone is an early-stage local-first iOS project for private conversational practice using Apple's on-device Foundation Models. It matters because it explores privacy-preserving AI companionship without a custom backend, analytics SDK, or remote chat logging. I maintain the code, docs, tests, releases, issue triage, and privacy/security review.
 
 ## Draft API Credit Answer
 
