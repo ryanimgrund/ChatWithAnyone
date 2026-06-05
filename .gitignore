@@ -1,0 +1,29 @@
+# Xcode
+DerivedData/
+.derivedData/
+build/
+*.xcresult
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# User-specific Xcode state
+xcuserdata/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# macOS
+.DS_Store
+
+# Secrets and local configuration
+*.mobileprovision
+*.p8
+*.cer
+*.p12
+.env
+.env.*

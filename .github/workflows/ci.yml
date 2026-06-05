@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  xcode-build:
+    name: Xcode build
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: List project
+        run: xcodebuild -list -project ChatWithAnyone.xcodeproj
+
+      - name: Build
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project ChatWithAnyone.xcodeproj \
+            -scheme ChatWithAnyone \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO \
+            build

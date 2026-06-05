@@ -1039,12 +1039,13 @@ struct ContentView: View {
                     let chatHistory = currentSession?.chatHistory ?? session.chatHistory
 
                     // Track latest full text to prevent repetition
-                    for try await partial in usedLLM.streamResponse(to: buildPrompt(for: persona, history: chatHistory)) {
+                    for try await partial in usedLLM.streamResponse(to: buildPrompt(for: persona, history: chatHistory, responseType: persona.responseType)) {
                         if var cs = currentSession,
                            let aiIdx = cs.chatHistory.lastIndex(where: { !$0.isUser }) {
-                            let newText = String(partial.dropFirst(fullReply.count))
+                            let partialText = partial.content
+                            let newText = String(partialText.dropFirst(fullReply.count))
                             cs.chatHistory[aiIdx].text += newText
-                            fullReply += newText
+                            fullReply = partialText
                             currentSession = cs
                             saveSessions()
                             if let last = cs.chatHistory.last {
@@ -1134,9 +1135,6 @@ struct ContentView: View {
 
         [Your response:]
         """
-        // Optionally print for debugging:
-        print("🟢 buildPrompt: \(prompt.count) chars, including \(history.count) messages")
-        print("🟢 FULL prompt string (\(prompt.count) chars):\n\(prompt)")
         return prompt
     }
 
@@ -1174,6 +1172,7 @@ struct ContentView: View {
         }
     }
 
+}
 
 // MARK: - Helper Views (now at file scope, not nested!)
 

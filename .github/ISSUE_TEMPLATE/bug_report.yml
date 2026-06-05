@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible problem in ChatWithAnyone.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the exact steps.
+      placeholder: |
+        1. Open the app
+        2. Create a persona
+        3. Send a message
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: xcode
+    attributes:
+      label: Xcode version
+      placeholder: Xcode 18.x
+  - type: input
+    id: ios
+    attributes:
+      label: iOS version and device or simulator
+      placeholder: iOS 26, iPhone simulator
+  - type: textarea
+    id: privacy
+    attributes:
+      label: Private data note
+      description: Do not paste private chat transcripts unless anonymized.
