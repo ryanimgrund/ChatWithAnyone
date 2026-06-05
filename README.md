@@ -1,5 +1,8 @@
 # ChatWithAnyone
 
+[![CI](https://github.com/ryanimgrund/ChatWithAnyone/actions/workflows/ci.yml/badge.svg)](https://github.com/ryanimgrund/ChatWithAnyone/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 ChatWithAnyone is an experimental iOS app for creating on-device conversational personas. It is built with SwiftUI, StoreKit 2, AVFoundation speech voices, and Apple's Foundation Models framework.
 
 The project goal is simple: give people a private, local-first space to practice conversation, explore language and tone, and save persona-based chats without sending prompts or chat history to a server.
