@@ -10,6 +10,20 @@ https://github.com/ryanimgrund/ChatWithAnyone
 
 Primary maintainer.
 
+## Form-Ready Fields
+
+### Why does this repository qualify?
+
+ChatWithAnyone is an early-stage local-first iOS app for private conversational practice using SwiftUI and Apple's on-device Foundation Models. It explores an AI companion pattern without a custom backend, analytics SDK, or remote chat logging, and includes privacy notes, tests, CI, security policy, issue templates, release workflow, and a maintainer playbook.
+
+### How will you use API credits for your project?
+
+I would use API credits for maintainer workflows: pull request review, issue triage, release-note drafting, accessibility test planning, privacy regression checks, and refactoring support as the prototype is split into smaller maintainable SwiftUI components.
+
+### Anything else we should know?
+
+This is early-stage as of June 5, 2026, so I am not claiming users, stars, or downloads yet. The repo is public, MIT-licensed, documented, and focused on local-first privacy and Apple Foundation Models experiments.
+
 ## Why This Project Qualifies
 
 ChatWithAnyone is an early-stage local-first iOS app for private conversational practice using SwiftUI and Apple's on-device Foundation Models. The project explores a privacy-preserving AI companion pattern without a custom backend, analytics SDK, or remote chat logging. It includes docs, tests, CI, privacy notes, security policy, issue templates, release workflow, and a maintainer playbook.
